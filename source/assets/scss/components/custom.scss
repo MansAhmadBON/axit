@@ -1,0 +1,34 @@
+@import '../vendors/vars.scss';
+@import '../vendors/mixins.scss';
+
+.custom {
+    background-image: url(../img/background/background_secondary.jpg);
+    background-size: cover;
+    position: relative;
+    height: 324px;
+    padding-top: 75px;
+    padding-left: 10px;
+    padding-right: 10px;
+    @media screen and(max-width: 600px){
+        padding-top: 50px;
+    }
+    .custom-box {
+        @include box;
+        .custom__content {
+            max-width: $width-content;
+            margin: 0 auto;
+            text-align: center;
+            .custom-title {
+                color: $color-white;
+                &::after {
+                    background-color: $color-white;
+                }
+            }
+            .custom-btn {
+                @include btn-first;
+                margin-top: 30px;
+                cursor: pointer;
+            }
+        }
+    }
+}

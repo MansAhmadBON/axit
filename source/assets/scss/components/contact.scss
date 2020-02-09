@@ -1,0 +1,85 @@
+@import '../vendors/vars.scss';
+@import '../vendors/mixins.scss';
+
+
+.contact {
+    padding-top: 105px;
+    padding-bottom: 80px;
+    padding-left: 10px;
+    padding-right: 10px;
+    @media screen and(max-width: 1200px){
+        padding-left: 10px;
+        padding-right: 2px;
+    }
+    @media screen and(max-width: 1000px){
+        padding-top: 80px;
+        padding-bottom: 70px;
+     }
+    @media screen and(max-width: 600px){
+        padding-top: 50px;
+        padding-bottom: 25px;
+     }
+    &__content {
+        width: 1135px;
+        margin: 0 auto;
+        @media screen and(max-width: 1200px){
+            width: 100%;
+        }
+        .contact-main {
+            padding-top: 70px;
+            &__form {
+                display: flex;
+                flex-direction: column;
+                //align-items: center;
+                .box-inputs {
+                    display: flex;
+                    justify-content: space-between;
+                    @media screen and(max-width: 1110px){
+                        flex-direction: column;
+                        align-items: center;
+                    }
+                    &__inp {
+                        max-width: 530px;
+                        display: flex;
+                        flex-direction: column;
+                        width: 100%;
+                        @media screen and(max-width: 520px){
+                            display: flex;
+                            width: 100%;
+                            flex-direction: column;
+                        }
+                        .contact-inp {
+                            max-width: 100%;
+                        }
+                        .contact-inp-middle {
+                            margin-top: 25px;
+                            margin-bottom: 25px;
+                        }
+                    }
+                    &__textarea {
+                        max-width: 530px;
+                        width: 100%;
+                        @media screen and(max-width: 1110px){
+                            margin-top: 30px;
+                        }
+                        @media screen and(max-width: 1110px){
+                            width: 100%;
+                        }
+                        .contact-textarea {
+                            height: 100%;
+                            @media screen and(max-width: 1110px){
+                                height: 150px;
+                            }
+                        }
+                    }
+                }
+                .contact-btn {
+                    @include btn-main(12px, 15px, 20px, 20px);
+                    width: 145px;
+                    margin: 40px auto 0 auto;
+                    //margin-top: 40px;
+                }
+            }
+        }
+    }
+}

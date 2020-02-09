@@ -1,0 +1,23 @@
+@import '../vendors/vars.scss';
+@import '../vendors/mixins.scss';
+
+input {
+    color: #313131;
+    border: none;
+    border-bottom: 1px solid #d6d6d6;
+    padding-bottom: 9px;
+    padding-left: 13px;
+    padding-right: 13px;
+    padding-top: 10px;
+    font-family: font-main;
+    font-size: 14px;
+    outline: none;
+    &::placeholder {
+        font-family: $font-main;
+        font-size: 14px;
+        color: #bdbdbd;
+    }
+    &:focus {
+        border-bottom: 2px solid #696969;
+    }
+}

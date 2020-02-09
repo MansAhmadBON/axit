@@ -1,0 +1,77 @@
+@import 'vars';
+
+@mixin line($bg-col){
+    content: "";
+    background-color: $bg-col;
+    display: block;
+    width: 67px;
+    height: 2px;
+    margin-top: 40px;
+    margin-bottom: 40px;
+    @media screen and(max-width: 591px){
+        display: none;
+     }
+} 
+
+@mixin btn-first {
+    background: transparent;
+    padding-left: 30px;
+    padding-right: 30px;
+    padding-top: 12px;
+    padding-bottom: 15px;
+    border: 2px solid #fff;
+    color: #fff; 
+    font-size: 15px;
+    font-family: $font-main;
+    cursor: pointer;
+    &:hover {
+        background-color: rgba(26, 26, 26, 0.6)
+    }
+}
+
+@mixin btn-secondary($p-bottom, $p-top){
+    border: none;
+    color: #fff;
+    background-color: $color-secondary;
+    padding-bottom: $p-bottom;
+    padding-top: $p-top;
+    font-family: $font-main;
+    font-size: 15px;
+    font-weight: 500;
+    margin-top: 30px;
+    cursor: pointer;
+    &:hover {
+        background-color: $bg-hover-btns;
+    }
+}
+
+@mixin btn-main($p-bottom, $p-top, $p-left, $p-right) {
+    border: none;
+    color: #fff;
+    background-color: $color-secondary;
+    padding-bottom: $p-bottom;
+    padding-top: $p-top;
+    padding-left: $p-left;
+    padding-right: $p-right;
+    border-radius: 4px;
+    font-size: 15px;
+    font-weight: bold;
+    font-family: $font-main;
+    box-shadow: 0px 2px 2px 1px #b9babc73;
+    cursor: pointer;
+    &:hover {
+        background-color: $bg-hover-btns;
+    }
+}
+
+@mixin box {
+    position: absolute;
+    background-color: rgba(0, 0, 0, 0.51);
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
